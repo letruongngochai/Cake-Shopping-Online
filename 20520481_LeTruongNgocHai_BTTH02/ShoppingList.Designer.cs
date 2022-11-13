@@ -53,7 +53,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 52);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1085, 346);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1094, 346);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // name
@@ -114,7 +114,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.TotalMoney.AutoSize = true;
             this.TotalMoney.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.TotalMoney.ForeColor = System.Drawing.Color.Red;
-            this.TotalMoney.Location = new System.Drawing.Point(691, 540);
+            this.TotalMoney.Location = new System.Drawing.Point(535, 540);
             this.TotalMoney.Name = "TotalMoney";
             this.TotalMoney.Size = new System.Drawing.Size(31, 37);
             this.TotalMoney.TabIndex = 10;
@@ -126,11 +126,12 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(497, 617);
+            this.pictureBox1.Location = new System.Drawing.Point(501, 617);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 84);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label5
             // 
@@ -159,7 +160,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.congrats.ForeColor = System.Drawing.Color.ForestGreen;
             this.congrats.Location = new System.Drawing.Point(286, 481);
             this.congrats.Name = "congrats";
-            this.congrats.Size = new System.Drawing.Size(542, 41);
+            this.congrats.Size = new System.Drawing.Size(524, 40);
             this.congrats.TabIndex = 14;
             this.congrats.Text = "Hurrayy! You got 15% discount◝(ᵔᵕᵔ)◜";
             this.congrats.Visible = false;
@@ -171,7 +172,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.sad.ForeColor = System.Drawing.Color.MidnightBlue;
             this.sad.Location = new System.Drawing.Point(132, 481);
             this.sad.Name = "sad";
-            this.sad.Size = new System.Drawing.Size(811, 41);
+            this.sad.Size = new System.Drawing.Size(788, 40);
             this.sad.TabIndex = 15;
             this.sad.Text = "Uh oh!! Looks like your code is expired or incorrect ((╥﹏╥))";
             this.sad.Visible = false;
@@ -181,7 +182,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(1084, 713);
+            this.ClientSize = new System.Drawing.Size(1093, 713);
             this.Controls.Add(this.sad);
             this.Controls.Add(this.congrats);
             this.Controls.Add(this.textBox1);

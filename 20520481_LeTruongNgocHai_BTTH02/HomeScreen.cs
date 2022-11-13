@@ -67,27 +67,13 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             detail.Controls.Clear();
         }
 
-        private void Cart_Click(object sender, EventArgs e)
-        {
-            //shopping.Rows.Add(CurId, NameProduct, SizeProduct, Quantity, Price);
-        }
-
-        //static string CurId, NameProduct, SizeProduct;
-        //static int Quantity, Price;
-
         private void OnClickDetailProduct(object sender, EventArgs e)
         {
             PictureBox p = (PictureBox)sender;
             ProductDetail pd = new ProductDetail(p.Name);
             pd.button2.Click += new EventHandler(X_click);
-            pd.button2.Click += new EventHandler(Cart_Click);
             detail.Controls.Add(pd);
 
-            //CurId = p.Name;
-            //NameProduct = pd.name.Text;
-            //SizeProduct = pd.size.Text;
-            //Quantity = Int32.Parse(pd.quantity.Value.ToString());
-            //Price = Int32.Parse(pd.label5.Name);
 
             flowLayoutPanel1.Visible = false;
             detail.Visible = true;
@@ -116,7 +102,6 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             shopping.Columns.Add("Size", typeof(string));
             shopping.Columns.Add("Quantity", typeof(int));
             shopping.Columns.Add("Price", typeof(int));
-
             ShowItem();
         }
 

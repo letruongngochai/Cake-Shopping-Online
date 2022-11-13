@@ -263,6 +263,16 @@ namespace _20520481_LeTruongNgocHai_BTTH02.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap internetbanking {
+            get {
+                object obj = ResourceManager.GetObject("internetbanking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap juice1 {
             get {
                 object obj = ResourceManager.GetObject("juice1", resourceCulture);
@@ -316,6 +326,16 @@ namespace _20520481_LeTruongNgocHai_BTTH02.Resources {
         internal static System.Drawing.Bitmap milktea3 {
             get {
                 object obj = ResourceManager.GetObject("milktea3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap momo {
+            get {
+                object obj = ResourceManager.GetObject("momo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,7 +17,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         static string cur_total;
         public static DataTable ShoppingItems;
         static string origin_total;
-
+        static UserInfomationInput f_user;
         public ShoppingList()
         {
             InitializeComponent();
@@ -82,7 +82,6 @@ namespace _20520481_LeTruongNgocHai_BTTH02
                 {
                     ItemOnCart it = new ItemOnCart(ShoppingItems.Rows[i]["ID"].ToString(), ShoppingItems.Rows[i]["Name"].ToString(), ShoppingItems.Rows[i]["Size"].ToString(), Int32.Parse(ShoppingItems.Rows[i]["Quantity"].ToString()), Int32.Parse(ShoppingItems.Rows[i]["Price"].ToString()));
                     
-
                     it.DeleteButton.Click += new EventHandler(DeleteButton_Click);
                     
                     flowLayoutPanel1.Controls.Add(it);
@@ -125,6 +124,12 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             {
                 DisplayNoti();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            f_user = new UserInfomationInput();
+            f_user.ShowDialog();
         }
     }
 }
