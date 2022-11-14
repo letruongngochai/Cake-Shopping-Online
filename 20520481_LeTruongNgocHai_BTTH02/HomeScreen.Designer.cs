@@ -400,6 +400,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.Name = "HaiSweet";
             this.Text = "HaiSweet";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HaiSweet_FormClosing);
             this.Load += new System.EventHandler(this.HaiSweet_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

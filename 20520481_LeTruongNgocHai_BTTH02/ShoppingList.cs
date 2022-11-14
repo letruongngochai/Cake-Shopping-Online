@@ -13,7 +13,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 {
     public partial class ShoppingList : Form
     {
-        static string[] Codes = new string[] {  "haisweet071102", "haisweet170103", "haisweet" };
+        static string[] Codes = new string[] { "haisweet071102", "haisweet170103", "haisweet" };
         static string cur_total;
         public static DataTable ShoppingItems;
         static string origin_total;
@@ -47,14 +47,14 @@ namespace _20520481_LeTruongNgocHai_BTTH02
                 sad.Visible = false;
                 congrats.Visible = false;
             }
-            else 
+            else
             {
                 if (IsContain(textBox1.Text))
                 {
                     congrats.Visible = true;
                     sad.Visible = false;
                     cur_total = Discount(Int32.Parse(TotalMoney.Text)).ToString();
-                    TotalMoney.Text = TotalMoney.Text + " - " + (Int32.Parse(TotalMoney.Text) - Discount(Int32.Parse(TotalMoney.Text))) +" = " + cur_total;
+                    TotalMoney.Text = TotalMoney.Text + " - " + (Int32.Parse(TotalMoney.Text) - Discount(Int32.Parse(TotalMoney.Text))) + " = " + cur_total;
                 }
                 else
                 {
@@ -64,7 +64,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
                     TotalMoney.Text = origin_total;
                 }
             }
-            
+
         }
 
         private int Discount(int price)
@@ -74,26 +74,21 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 
         private void ShoppingList_Load(object sender, EventArgs e)
         {
-            try
+
+            ShoppingItems = HaiSweet.shopping;
+            flowLayoutPanel1.Controls.Clear();
+            for (int i = 0; i < ShoppingItems.Rows.Count; i++)
             {
-                ShoppingItems = HaiSweet.shopping;
-                flowLayoutPanel1.Controls.Clear();
-                for (int i = 0; i < ShoppingItems.Rows.Count; i++)
-                {
-                    ItemOnCart it = new ItemOnCart(ShoppingItems.Rows[i]["ID"].ToString(), ShoppingItems.Rows[i]["Name"].ToString(), ShoppingItems.Rows[i]["Size"].ToString(), Int32.Parse(ShoppingItems.Rows[i]["Quantity"].ToString()), Int32.Parse(ShoppingItems.Rows[i]["Price"].ToString()));
-                    
-                    it.DeleteButton.Click += new EventHandler(DeleteButton_Click);
-                    
-                    flowLayoutPanel1.Controls.Add(it);
-                }
-                TotalMoney.Text = total().ToString();
-                cur_total = total().ToString();
-                origin_total = total().ToString();
+                ItemOnCart it = new ItemOnCart(ShoppingItems.Rows[i]["ID"].ToString(), ShoppingItems.Rows[i]["Name"].ToString(), ShoppingItems.Rows[i]["Size"].ToString(), Int32.Parse(ShoppingItems.Rows[i]["Quantity"].ToString()), Int32.Parse(ShoppingItems.Rows[i]["Price"].ToString()));
+
+                it.DeleteButton.Click += new EventHandler(DeleteButton_Click);
+
+                flowLayoutPanel1.Controls.Add(it);
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Looks like there is no orders yet @@ \nLet's have a look at our product ^^", ":(", MessageBoxButtons.OK);
-            }
+            TotalMoney.Text = total().ToString();
+            cur_total = total().ToString();
+            origin_total = total().ToString();
+
             DisplayNoti();
         }
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -120,7 +115,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 DisplayNoti();
             }
@@ -128,8 +123,13 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            f_user = new UserInfomationInput();
-            f_user.ShowDialog();
+            if (ShoppingItems.Rows.Count == 0)
+                MessageBox.Show("Looks like you haven't made any orders yet \nLet's have a look at our product ^^", "♥", MessageBoxButtons.OK);
+            else
+            {
+                f_user = new UserInfomationInput();
+                f_user.ShowDialog();
+            }
         }
     }
 }

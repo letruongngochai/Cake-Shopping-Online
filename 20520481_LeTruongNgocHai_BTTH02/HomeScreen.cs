@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _20520481_LeTruongNgocHai_BTTH02.DAO;
 using _20520481_LeTruongNgocHai_BTTH02.CustomControls;
+using System.Data.SqlClient;
 
 namespace _20520481_LeTruongNgocHai_BTTH02
 {
@@ -200,7 +201,6 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 
         private DataTable SearchProduct(string txt_search)
         {
-            category = "abc";
             string query = "select * from PRODUCT where PRODUCT_NAME like '%" + txt_search + "%'";
             DataProvider provider = new DataProvider();
             DataTable temp = new DataTable();
@@ -253,6 +253,20 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         {
             dt_filter = FilterType(comboBox1.Text);
             ShowProductSearch(dt_filter);
+        }
+
+        private void HaiSweet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ResetDB();
+        }
+        private void ResetDB()
+        {
+            string connectionString = "Data Source=NGOCHAI;Initial Catalog=ShoppingOnline;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "TRUNCATE TABLE SHOPPINGPRODUCT";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
         }
     }
 

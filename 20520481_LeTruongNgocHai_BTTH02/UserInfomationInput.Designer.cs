@@ -39,6 +39,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.label3 = new System.Windows.Forms.Label();
             this.ReceiverNumber = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.ScanHere = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.QR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,6 +147,20 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.button1.TabIndex = 13;
             this.button1.Text = "♥Finish your deal ♥";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ScanHere
+            // 
+            this.ScanHere.AutoSize = true;
+            this.ScanHere.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ScanHere.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScanHere.Location = new System.Drawing.Point(20, 388);
+            this.ScanHere.MaximumSize = new System.Drawing.Size(400, 0);
+            this.ScanHere.Name = "ScanHere";
+            this.ScanHere.Size = new System.Drawing.Size(336, 46);
+            this.ScanHere.TabIndex = 14;
+            this.ScanHere.Text = "Scan here to purchase:";
+            this.ScanHere.Visible = false;
             // 
             // UserInfomationInput
             // 
@@ -153,6 +168,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(800, 619);
+            this.Controls.Add(this.ScanHere);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ReceiverNumber);
             this.Controls.Add(this.label3);
@@ -184,5 +200,6 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ReceiverNumber;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label ScanHere;
     }
 }
