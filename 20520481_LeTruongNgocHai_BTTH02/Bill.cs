@@ -15,19 +15,26 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 {
     public partial class Bill : Form
     {
+        
         public Bill()
         {
             InitializeComponent();
+
         }
 
         private void Bill_Load(object sender, EventArgs e)
         {
             LoadReport();
+            TenKH.Text += UserInfomationInput.TenKH;
+            SoKH.Text += UserInfomationInput.SoKH;
+            DiaChiKH.Text += UserInfomationInput.DiaChiKH;
+            PayMethod.Text += UserInfomationInput.Payment_Method;
             this.reportViewer1.RefreshReport();
         }
 
         private void LoadReport()
         {
+
             string query = "SELECT * FROM SHOPPINGPRODUCT";
             DataProvider dp = new DataProvider();
             DataTable dt = dp.ExecuteQuery(query);
@@ -45,7 +52,10 @@ namespace _20520481_LeTruongNgocHai_BTTH02
                 reportViewer1.LocalReport.DataSources.Add(rds);
                 //reportViewer1.RefreshReport();
             }
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -74,7 +74,6 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 
         private void ShoppingList_Load(object sender, EventArgs e)
         {
-
             ShoppingItems = HaiSweet.shopping;
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < ShoppingItems.Rows.Count; i++)

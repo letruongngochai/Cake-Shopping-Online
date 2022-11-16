@@ -181,6 +181,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.Controls.Add(this.name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UserInfomationInput";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase";
             ((System.ComponentModel.ISupportInitialize)(this.QR)).EndInit();
             this.ResumeLayout(false);
@@ -191,15 +192,15 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         #endregion
 
         public System.Windows.Forms.Label name;
-        private System.Windows.Forms.TextBox ReceiverName;
+        public System.Windows.Forms.TextBox ReceiverName;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ReceiverAddress;
+        public System.Windows.Forms.TextBox ReceiverAddress;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox PaymentMethod;
-        private System.Windows.Forms.PictureBox QR;
+        public System.Windows.Forms.ComboBox PaymentMethod;
+        public System.Windows.Forms.PictureBox QR;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ReceiverNumber;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox ReceiverNumber;
+        public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label ScanHere;
     }
 }

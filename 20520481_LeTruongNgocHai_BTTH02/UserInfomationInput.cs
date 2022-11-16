@@ -15,6 +15,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
 {
     public partial class UserInfomationInput : Form
     {
+        public static string TenKH, SoKH, DiaChiKH, Payment_Method;
         public UserInfomationInput()
         {
             InitializeComponent();
@@ -42,8 +43,18 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         private void button1_Click(object sender, EventArgs e)
         {
             SaveData(ShoppingList.ShoppingItems);
-            Bill bill = new Bill();
-            bill.ShowDialog();
+            if (ReceiverName.Text == "" || ReceiverNumber.Text == "" || ReceiverAddress.Text == "")
+                MessageBox.Show("Please fill all the empty fields in order to buy!", ":(");
+            else
+            {
+                TenKH = ReceiverName.Text;
+                DiaChiKH = ReceiverAddress.Text;
+                SoKH = ReceiverNumber.Text;
+                Payment_Method = PaymentMethod.Text;
+                Bill bill = new Bill();
+                bill.ShowDialog();
+            }
+
         }
         private void SaveData(DataTable dt)
         {
