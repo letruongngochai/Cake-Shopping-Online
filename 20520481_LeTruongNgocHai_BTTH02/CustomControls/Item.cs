@@ -16,7 +16,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
         {
             InitializeComponent();
         }
-
+        static int money;
         public Item(string id, string name, string price) : this()
         {
             Bitmap bm1 = (Bitmap)Resources.Resource1.ResourceManager.GetObject(id);
@@ -26,13 +26,14 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             pictureBox1.Name = id;
 
             label1.Text = name;
+            money = Int32.Parse(price);
             label2.Text = Int32.Parse(price) / 1000 + ".000VND";
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            HaiSweet.history.Rows.Add(pictureBox1.Name, label1.Text, money);
         }
     }
 }

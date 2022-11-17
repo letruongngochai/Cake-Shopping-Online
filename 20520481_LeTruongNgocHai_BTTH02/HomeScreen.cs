@@ -18,7 +18,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         public static ShoppingList sl;
         static DataTable dt;
         public string category = "";
-        public static DataTable shopping;
+        public static DataTable shopping, history;
         public HaiSweet()
         {
             sl = new ShoppingList();
@@ -103,6 +103,11 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             shopping.Columns.Add("Size", typeof(string));
             shopping.Columns.Add("Quantity", typeof(int));
             shopping.Columns.Add("Price", typeof(int));
+
+            history = new DataTable();
+            history.Columns.Add("ID", typeof(string));
+            history.Columns.Add("Name", typeof(string));
+            history.Columns.Add("Price", typeof(int));
             ShowItem();
         }
 
@@ -259,6 +264,13 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         {
             ResetDB();
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            History f_history = new History();
+            f_history.ShowDialog();
+        }
+
         private void ResetDB()
         {
             string connectionString = "Data Source=NGOCHAI;Initial Catalog=ShoppingOnline;Integrated Security=True";

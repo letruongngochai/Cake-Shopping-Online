@@ -53,6 +53,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.detail = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -374,11 +375,26 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.comboBox1.TabIndex = 23;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Linen;
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label12.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label12.Location = new System.Drawing.Point(10, 261);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 37);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "History";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // HaiSweet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 555);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel1);
@@ -441,6 +457,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         private System.Windows.Forms.Panel detail;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label12;
     }
 }
 
