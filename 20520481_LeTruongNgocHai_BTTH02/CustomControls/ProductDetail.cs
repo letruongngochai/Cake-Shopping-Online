@@ -71,5 +71,38 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             noti.Visible = true;
             HaiSweet.shopping.Rows.Add(pic_detail.Name, name.Text, size.SelectedItem.ToString(), Int32.Parse(quantity.Value.ToString()), Int32.Parse(label5.Name));
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            like.Visible = true;
+            unlike.Visible = false;
+        }
+
+        private void like_Click(object sender, EventArgs e)
+        {
+            unlike.Visible = true;
+            like.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (like.Visible == true)
+                HaiSweet.lovelist.Rows.Add(pic_detail.Name.ToString(), name.Text);
+        }
+
+        private void ProductDetail_Load(object sender, EventArgs e)
+        {
+            IsLoved();
+        }
+
+        private void IsLoved()
+        {
+            foreach (DataRow row in HaiSweet.lovelist.Rows)
+                if (pic_detail.Name == row["ID"].ToString())
+                {
+                    like.Visible = true;
+                    unlike.Visible = false;
+                }
+        }
     }
 }

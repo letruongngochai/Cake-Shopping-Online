@@ -88,6 +88,12 @@
     <Compile Include="CustomControls\ItemOnCart.Designer.cs">
       <DependentUpon>ItemOnCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\LoveList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\LoveList.Designer.cs">
+      <DependentUpon>LoveList.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ProductDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ItemOnCart.resx">
       <DependentUpon>ItemOnCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\LoveList.resx">
+      <DependentUpon>LoveList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ProductDetail.resx">
       <DependentUpon>ProductDetail.cs</DependentUpon>

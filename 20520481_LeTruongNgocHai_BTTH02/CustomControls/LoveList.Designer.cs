@@ -1,7 +1,7 @@
 ﻿
 namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
 {
-    partial class History
+    partial class LoveList
     {
         /// <summary>
         /// Required designer variable.
@@ -35,25 +35,26 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.PaleGreen;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(732, 625);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(781, 665);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // History
+            // LoveList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(732, 625);
+            this.ClientSize = new System.Drawing.Size(781, 665);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "History";
+            this.Name = "LoveList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "History";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Your favourite list";
+            this.Load += new System.EventHandler(this.LoveList_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

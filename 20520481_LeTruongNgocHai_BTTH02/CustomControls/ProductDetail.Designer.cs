@@ -29,6 +29,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
             this.name = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,8 +43,12 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             this.price = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.noti = new System.Windows.Forms.Label();
+            this.unlike = new System.Windows.Forms.PictureBox();
+            this.like = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unlike)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.like)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -181,6 +186,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             this.button2.TabIndex = 12;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // noti
             // 
@@ -194,11 +200,36 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             this.noti.Text = "Your items have been add to cart ♥";
             this.noti.Visible = false;
             // 
+            // unlike
+            // 
+            this.unlike.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("unlike.BackgroundImage")));
+            this.unlike.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.unlike.Location = new System.Drawing.Point(829, 371);
+            this.unlike.Name = "unlike";
+            this.unlike.Size = new System.Drawing.Size(59, 59);
+            this.unlike.TabIndex = 14;
+            this.unlike.TabStop = false;
+            this.unlike.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // like
+            // 
+            this.like.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("like.BackgroundImage")));
+            this.like.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.like.Location = new System.Drawing.Point(829, 371);
+            this.like.Name = "like";
+            this.like.Size = new System.Drawing.Size(59, 59);
+            this.like.TabIndex = 15;
+            this.like.TabStop = false;
+            this.like.Visible = false;
+            this.like.Click += new System.EventHandler(this.like_Click);
+            // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Controls.Add(this.like);
+            this.Controls.Add(this.unlike);
             this.Controls.Add(this.noti);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.price);
@@ -215,8 +246,11 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
             this.Name = "ProductDetail";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(927, 700);
+            this.Load += new System.EventHandler(this.ProductDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unlike)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.like)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +271,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
         public System.Windows.Forms.Label price;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label noti;
+        public System.Windows.Forms.PictureBox unlike;
+        public System.Windows.Forms.PictureBox like;
     }
 }

@@ -86,7 +86,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
         #endregion
 
         public System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
     }
 }

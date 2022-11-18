@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
 {
-    public partial class History : Form
+    public partial class LoveList : Form
     {
-        public History()
+        public LoveList()
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void LoveList_Load(object sender, EventArgs e)
         {
             Random rd = new Random();
-            DataTable dt = HaiSweet.history;
+            DataTable dt = HaiSweet.lovelist;
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -27,10 +28,10 @@ namespace _20520481_LeTruongNgocHai_BTTH02.CustomControls
                 id = id.Replace(" ", "");
 
                 string name = dt.Rows[i]["Name"].ToString();
-                int price = Convert.ToInt32(dt.Rows[i]["Price"]);
 
-                CustomControls.Item it = new CustomControls.Item(id, name, price.ToString());
+                CustomControls.Item it = new CustomControls.Item(id, name, "0");
                 it.BackColor = Color.FromArgb(rd.Next(0, 255), rd.Next(0, 255), rd.Next(0, 255));
+                it.label2.Visible = false;
                 flowLayoutPanel1.Controls.Add(it);
             }
         }
