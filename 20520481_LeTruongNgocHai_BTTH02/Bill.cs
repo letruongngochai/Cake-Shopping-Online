@@ -25,6 +25,11 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         private void Bill_Load(object sender, EventArgs e)
         {
             LoadReport();
+            if (ShoppingList.isDiscount == true)
+            {
+                label1.Visible = true;
+                label1.Text += ShoppingList.CurCode;
+            }
             TenKH.Text += UserInfomationInput.TenKH;
             SoKH.Text += UserInfomationInput.SoKH;
             DiaChiKH.Text += UserInfomationInput.DiaChiKH;

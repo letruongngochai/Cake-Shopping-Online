@@ -15,9 +15,11 @@ namespace _20520481_LeTruongNgocHai_BTTH02
     {
         static string[] Codes = new string[] { "haisweet071102", "haisweet170103", "haisweet" };
         static string cur_total;
-        public static DataTable ShoppingItems;
+        public static DataTable ShoppingItems, ShoppingItemsDiscount;
         static string origin_total;
         static UserInfomationInput f_user;
+        public static bool isDiscount = false;
+        public static string CurCode = "";
         public ShoppingList()
         {
             InitializeComponent();
@@ -55,6 +57,12 @@ namespace _20520481_LeTruongNgocHai_BTTH02
                     sad.Visible = false;
                     cur_total = Discount(Int32.Parse(TotalMoney.Text)).ToString();
                     TotalMoney.Text = TotalMoney.Text + " - " + (Int32.Parse(TotalMoney.Text) - Discount(Int32.Parse(TotalMoney.Text))) + " = " + cur_total;
+                    foreach (DataRow row in ShoppingItemsDiscount.Rows)
+                    {
+                        row[4] = Convert.ToInt32(row[4]) * 0.85;
+                    }
+                    isDiscount = true;
+                    CurCode = textBox1.Text;
                 }
                 else
                 {
@@ -75,6 +83,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         private void ShoppingList_Load(object sender, EventArgs e)
         {
             ShoppingItems = HaiSweet.shopping;
+            ShoppingItemsDiscount = HaiSweet.shopping;
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < ShoppingItems.Rows.Count; i++)
             {
@@ -95,6 +104,7 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.Controls.Clear();
             this.InitializeComponent();
             ShoppingItems = HaiSweet.shopping;
+            ShoppingItemsDiscount = HaiSweet.shopping;
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < ShoppingItems.Rows.Count; i++)
             {

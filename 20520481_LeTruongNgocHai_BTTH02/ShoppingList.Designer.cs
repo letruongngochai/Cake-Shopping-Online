@@ -216,9 +216,9 @@ namespace _20520481_LeTruongNgocHai_BTTH02
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label TotalMoney;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label congrats;
         public System.Windows.Forms.Label sad;
     }

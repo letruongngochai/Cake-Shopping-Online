@@ -40,9 +40,16 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             }
         }
 
+        private DataTable GetTable()
+        {
+            if (ShoppingList.isDiscount == true)
+                return ShoppingList.ShoppingItemsDiscount;
+            return ShoppingList.ShoppingItems;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveData(ShoppingList.ShoppingItems);
+            SaveData(GetTable());
             if (ReceiverName.Text == "" || ReceiverNumber.Text == "" || ReceiverAddress.Text == "")
                 MessageBox.Show("Please fill all the empty fields in order to buy!", ":(");
             else
