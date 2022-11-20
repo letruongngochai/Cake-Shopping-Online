@@ -44,12 +44,11 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.BackColor = System.Drawing.Color.Linen;
             this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 186);
+            this.reportViewer1.Location = new System.Drawing.Point(0, -1);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.ShowToolBar = false;
-            this.reportViewer1.Size = new System.Drawing.Size(1360, 619);
+            this.reportViewer1.Size = new System.Drawing.Size(897, 806);
             this.reportViewer1.TabIndex = 0;
             // 
             // TenKH
@@ -109,13 +108,13 @@ namespace _20520481_LeTruongNgocHai_BTTH02
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(1357, 804);
+            this.ClientSize = new System.Drawing.Size(894, 804);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PayMethod);
             this.Controls.Add(this.DiaChiKH);
             this.Controls.Add(this.SoKH);
             this.Controls.Add(this.TenKH);
-            this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Bill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

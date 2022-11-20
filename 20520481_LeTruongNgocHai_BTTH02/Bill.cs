@@ -57,6 +57,27 @@ namespace _20520481_LeTruongNgocHai_BTTH02
                 reportViewer1.LocalReport.DataSources.Add(rds);
                 //reportViewer1.RefreshReport();
             }
+
+            TenKH.Text += UserInfomationInput.TenKH;
+            SoKH.Text += UserInfomationInput.SoKH;
+            DiaChiKH.Text += UserInfomationInput.DiaChiKH;
+            PayMethod.Text += UserInfomationInput.Payment_Method;
+
+            ReportParameter para1 = new ReportParameter();
+            para1.Name = "Name"; //Đặt đúng tên khi đặt trong report
+            para1.Values.Add(UserInfomationInput.TenKH);
+
+            ReportParameter para2 = new ReportParameter();
+            para2.Name = "Address";
+            para2.Values.Add(UserInfomationInput.DiaChiKH);
+            ReportParameter para3 = new ReportParameter();
+            para3.Name = "Number";
+            para3.Values.Add(UserInfomationInput.SoKH);
+            ReportParameter para4 = new ReportParameter();
+            para4.Name = "Method";
+            para4.Values.Add(UserInfomationInput.Payment_Method);
+
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[] { para1, para2, para3, para4});
         }
 
         private void label1_Click(object sender, EventArgs e)
